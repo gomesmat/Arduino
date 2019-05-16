@@ -1,14 +1,18 @@
 int leds = 8; // pino de leds
 
 light_mng(String cmd){
-	if (cmd == "on"){
-		if (!digitalRead(leds)){
+	switch (cmd){
+		case "on":
+			if (!digitalRead(leds)){
 			// codigo aqui
-		}
-	}
-	if (cmd == "off"{
-		if (digitalRead(leds)){
+			}
+			break;
+		case "off":
+			if (digitalRead(leds)){
 			// codigo aqui
-		}
+			}
+			break;
+		default
+			return;
 	}
 }
